@@ -17,29 +17,29 @@ module.exports = {
         url: 'https://discord.gg/FUEHs7RCqz'
     })
      
-      .setDescription(`__**STATS :**__\n\n> **📊 Bot in servers:** ${serverCount}\n> **🟢 Bot Ping:** ${botPing}ms\n> **👑 Made By [GlaceYT](https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A)**\n\n__**COMMANDS :**__ `)
+      .setDescription(`__**Estadística:**__\n\n> **📊 Servidores:** ${serverCount}\n> **🟢 Bot Ping:** ${botPing}ms\n> **👑 Hecho por Alamo**\n\n__**Comandos:**__ `)
       .addFields(
       
         {
-          name: '▶️  Basic',
+          name: '▶️  Basico',
           value: '`avatar`, `owner`, `support`, `invite`, `userinfo`',
           inline: true,
         },
        
         {
-          name: '▶️  Music',
+          name: '▶️  Musica',
           value: '`play`, `stop`, `seek`,`volume`,`pause`,`resume`,`skip`,`remove`,`shuffle`,`queue`',
           inline: true,
         },
       
         {
-          name: '▶️  Fun',
+          name: '▶️  Divertido',
           value: ' `ascii`, `joke`, `roll`',
           inline: true,
         },
       
         {
-          name: '▶️  Image',
+          name: '▶️  Imaganes',
           value: '`cat`, `dog`',
           inline: true,
         },
@@ -51,32 +51,12 @@ module.exports = {
         },
      
         {
-          name: '▶️  Utility',
+          name: '▶️  Utilidad',
           value: '`kick`, `ban`, `serverinfo`,`userinfo`, `clear`',
           inline: true,
         }
       )
       .setThumbnail(botUser.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
       .setImage(`https://cdn.discordapp.com/attachments/1113800537402527903/1236803979996958740/11.png?ex=6641e8b7&is=66409737&hm=96f69ba8bcde4ca44bf8713e22001e0bafad0335cfd1f57c439a34b4762f0e03&`);
-
-    const button1 = new ButtonBuilder()
-      .setLabel('YouTube')
-      .setURL('https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A')
-      .setStyle(ButtonStyle.Link);
-
-    const button2 = new ButtonBuilder()
-      .setLabel('Discord')
-      .setURL('https://discord.gg/xQF9f9yUEM')
-      .setStyle(ButtonStyle.Link);
-
-    const button3 = new ButtonBuilder()
-      .setLabel('Code')
-      .setURL('https://github.com/GlaceYT')
-      .setStyle(ButtonStyle.Link);
-      
-    const row = new ActionRowBuilder()
-      .addComponents(button1, button2, button3);
-    
-    message.reply({ embeds: [embed], components: [row] });
   },
 };
