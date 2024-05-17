@@ -58,7 +58,24 @@ module.exports = {
       )
       .setThumbnail(botUser.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
       .setImage(`https://cdn.discordapp.com/attachments/1113800537402527903/1236803979996958740/11.png?ex=6641e8b7&is=66409737&hm=96f69ba8bcde4ca44bf8713e22001e0bafad0335cfd1f57c439a34b4762f0e03&`);
-    
+
+    const button1 = new ButtonBuilder()
+      .setLabel('YouTube')
+      .setURL('https://www.youtube.com/channel/UC-dsghUUgR6TnUV-0ZD_dSg')
+      .setStyle(ButtonStyle.Link);
+
+    const button2 = new ButtonBuilder()
+      .setLabel('Discord')
+      .setURL('https://discord.gg/hzcdk4FPX2')
+      .setStyle(ButtonStyle.Link);
+
+    const button3 = new ButtonBuilder()
+      .setLabel('GitHub')
+      .setURL('https://github.com/zAIamo')
+      .setStyle(ButtonStyle.Link);
+      
+    const row = new ActionRowBuilder()
+      .addComponents(button1, button2, button3);
     message.reply({ embeds: [embed], components: [row] });
   },
 };
